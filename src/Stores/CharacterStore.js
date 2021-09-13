@@ -19,7 +19,7 @@ class CharacterStore {
 
 
     /* ------- methods ------- */
-	 createCharacter(character) {
+	 createCharacter = (character) => {
         const newCharacter = new Character(character)
 		 this.characterList.push(newCharacter); 
        // this.characterList = [...this.characterList, {...character, characterId: Math.random()}]
