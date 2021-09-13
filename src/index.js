@@ -3,10 +3,17 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import { CharacterStoreProvider } from './Provider/CharacterStoreProvider';
+import CharacterStore from './Stores/CharacterStore';
+
+
+const characterStore = new CharacterStore();
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <CharacterStoreProvider characterStore={characterStore}>
+      <App />
+    </CharacterStoreProvider>
   </React.StrictMode>,
   document.getElementById('root')
 );
