@@ -4,7 +4,7 @@ import { observer } from 'mobx-react'
 
 const CharacterList = () => {
     const characterList = useCharacterStore().characterList //Destructure
-    const totalCharacters = useCharacterStore().totalCharacters
+    
     return (
 
 
@@ -12,7 +12,7 @@ const CharacterList = () => {
 
 {/* ------- map over characterList array by ID and print only names ------- */}
 
-            {totalCharacters}
+          
 
         </div>
     )
