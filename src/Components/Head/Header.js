@@ -2,7 +2,7 @@ import React from 'react'
 import { useCharacterStore } from '../../Provider/CharacterStoreProvider'
 
 const Header = () => {
-    const totalCharacters = useCharacterStore().totalCharacters
+    const { totalCharacters } = useCharacterStore()
     return (
         <div>
             <p>This is the header</p>
