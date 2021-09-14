@@ -1,4 +1,4 @@
-import { autorun, makeAutoObservable } from 'mobx';
+import { makeAutoObservable } from 'mobx';
 import Character from '../Models/Character';
 
 class CharacterStore {
@@ -14,7 +14,6 @@ class CharacterStore {
     /* ------- observe array and methods ------- */
     constructor() {
         makeAutoObservable(this);       
-     /*    autorun(this.logCharacterDetails); */
     }
 
 
@@ -22,8 +21,7 @@ class CharacterStore {
 	 createCharacter = (character) => {
         const newCharacter = new Character(character)
 		 this.characterList.push(newCharacter); 
-       // this.characterList = [...this.characterList, {...character, characterId: Math.random()}]
-        this.totalCharacters = this.characterList.length
+         this.totalCharacters = this.characterList.length
 	} 
   
 	updateCharacter(characterId, update) {
