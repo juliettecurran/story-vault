@@ -29,7 +29,7 @@ function App() {
             <Route exact path='/new'>
               <NewCharacterForm />
             </Route>
-            <Route exact path='/character/:review_id'>
+            <Route exact path='/character/:character_id'>
               <SingleCharacter />
             </Route> 
           </Switch>
