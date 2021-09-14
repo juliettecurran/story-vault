@@ -3,7 +3,7 @@ import { v4 as uuidv4 } from 'uuid';
 class Character {
     constructor(data) {
 
-        this.Id = uuidv4(); // uuid uuidv4();
+        this.Id = uuidv4();
         this.name = data.name;
         this.title = data.title;
         this.age = data.age;
