@@ -1,0 +1,25 @@
+.characterList__characterGrid {
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr 1fr;
+	width: 80vw;
+	grid-template-areas:
+		"characterName characterType editBtn deleteBtn"
+		"characterName characterType editBtn deleteBtn"
+		"characterName characterType editBtn deleteBtn";
+}
+
+.characterList__displayCharacterName {
+	grid-area: characterName;
+}
+
+.characterList__displayCharacterType {
+	grid-area: characterType;
+}
+
+.characterList__editCharacterBtn {
+	grid-area: editBtn;
+}
+
+.characterList__deleteCharacterBtn {
+	grid-area: deleteBtn;
+}
