@@ -26,7 +26,7 @@ class CharacterStore {
   
 	updateCharacter(characterId, update) {
 		const characterIndexAtId = this.characterList.findIndex(
-			(character) => character.id === characterId
+			(character) => character.Id === characterId
 		);
 		if (characterIndexAtId >= 0 && update) {
 			this.characterList[characterIndexAtId] =
@@ -35,7 +35,7 @@ class CharacterStore {
 	}
 
     deleteCharacter(characterId) {
-        const characterIndexAtId = this.characterList.findIndex((character) => character.id === characterId);
+        const characterIndexAtId = this.characterList.findIndex((character) => character.Id === characterId);
         if (characterIndexAtId > -1) {
             this.characterList.splice(characterIndexAtId, 1)
             this.totalCharacters = this.characterList.length
@@ -43,7 +43,7 @@ class CharacterStore {
     }
 
      characterById(characterId) {
-        const characterIndexAtId = this.characterList.findIndex((character) => character.id === characterId);
+        const characterIndexAtId = this.characterList.findIndex((character) => character.Id === characterId);
         return this.characterList[characterIndexAtId]
     }
   
