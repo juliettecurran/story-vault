@@ -2,20 +2,14 @@ import './App.css';
 import Header from "./Components/Head/Header";
 import Navbar from "./Components/Head/Navbar";
 import Home from "./Components/Content/Home";
-import CharacterList from './Components/Content/CharacterList';
-import NewCharacterForm from './Components/Content/NewCharacterForm';
+import CharacterList from './Components/Content/Characters/CharacterList';
+import NewCharacterForm from './Components/Content/Form/NewCharacterForm';
 import SingleCharacter from './Components/Content/SingleCharacter';
 import Footer from "./Components/Footer/Footer";
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
 
 function App() {
   return (
-
-    
-  
- 
-  
-
 
 <div className="grid-container App">
     
