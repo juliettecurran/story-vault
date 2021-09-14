@@ -21,8 +21,8 @@
 
 .Content {
   grid-area: Content;
-  border: 1px solid black;
   background-color: lightgray;
+  padding: 1em;
 }
 
 .home-text {
