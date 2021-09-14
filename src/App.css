@@ -25,6 +25,11 @@
   background-color: lightgray;
 }
 
+.home-text {
+  width: 50vw;
+  margin: auto;
+}
+
 .Footer { 
   grid-area: Footer;
   background-color: gray;
