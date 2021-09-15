@@ -1,25 +1,41 @@
 .characterList__characterGrid {
-	display: grid;
-	grid-template-columns: 1fr 1fr 1fr 1fr;
-	width: 80vw;
-	grid-template-areas:
-		"characterName characterType editBtn deleteBtn"
-		"characterName characterType editBtn deleteBtn"
-		"characterName characterType editBtn deleteBtn";
+	display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	justify-content: space-around;
+	align-items: center;
+	width: 100%;
+	align-content: space-between;
 }
 
-.characterList__displayCharacterName {
-	grid-area: characterName;
-}
-
-.characterList__displayCharacterType {
-	grid-area: characterType;
-}
-
-.characterList__editCharacterBtn {
-	grid-area: editBtn;
-}
-
+.characterList__displayCharacterName,
+.characterList__displayCharacterType,
+.characterList__editCharacterBtn,
 .characterList__deleteCharacterBtn {
-	grid-area: deleteBtn;
+	display: block;
+	flex-grow: 0;
+	flex-shrink: 1;
+	flex-basis: auto;
+	align-self: auto;
+	width: 25%;
+}
+
+.characterList__editCharacterBtn,
+.characterList__deleteCharacterBtn {
+	text-decoration: none;
+	padding: 0.5em;
+	background-color: #4c63af;
+	border-radius: 8px;
+	cursor: pointer;
+	padding: 8px 25px;
+	font-size: 14px;
+	border: none;
+	color: white;
+	width: 5%;
+	font-weight: 500;
+}
+
+.characterList__editCharacterBtn:hover,
+.characterList__deleteCharacterBtn:hover {
+	background-color: #31478f;
 }
