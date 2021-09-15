@@ -1,37 +1,38 @@
 .App {
-  text-align: center;
+	text-align: center;
+	color: #112052;
 }
 
 .grid-container {
-  display: grid;
-  grid-template-columns: 1.1fr 0.9fr 1fr;
-  grid-template-rows: 1fr 6fr 1fr;
-  gap: 0px 0px;
-  grid-auto-flow: row;
-  grid-template-areas:
-    "Header Header Header"
-    "Content Content Content"
-    "Footer Footer Footer";
+	display: grid;
+	grid-template-columns: 1.1fr 0.9fr 1fr;
+	grid-template-rows: 1fr 6fr 1fr;
+	gap: 0px 0px;
+	grid-auto-flow: row;
+	grid-template-areas:
+		"Header Header Header"
+		"Content Content Content"
+		"Footer Footer Footer";
 }
 
-.Header { 
-  grid-area: Header; 
-  background-color: gray;
+.Header {
+	grid-area: Header;
+	background-color: #9198df;
 }
 
 .Content {
-  grid-area: Content;
-  background-color: lightgray;
-  padding: 1em;
+	grid-area: Content;
+	background-color: #f8f8f8;
+	padding: 1em;
 }
 
 .home-text {
-  width: 50vw;
-  margin: auto;
+	width: 50vw;
+	margin: auto;
 }
 
-.Footer { 
-  grid-area: Footer;
-  background-color: gray;
-  bottom: 0;
+.Footer {
+	grid-area: Footer;
+	background-color: #9198df;
+	bottom: 0;
 }
