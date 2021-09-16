@@ -4,7 +4,7 @@ import Navbar from "./Components/Head/Navbar";
 import Home from "./Components/Content/Home";
 import CharacterList from "./Components/Content/Characters/CharacterList";
 import NewCharacterForm from "./Components/Content/Form/NewCharacterForm";
-import NewLocationForm from "./Components/Content/Form/NewLocationForm";
+import NewLocationForm from "./Components/Content/Form/LocationForm/NewLocationForm";
 import SingleCharacter from "./Components/Content/SingleCharacter";
 import Footer from "./Components/Footer/Footer";
 import { BrowserRouter, Route, Switch } from "react-router-dom";
