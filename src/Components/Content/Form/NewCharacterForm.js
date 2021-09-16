@@ -1,7 +1,7 @@
 import React from "react";
-import "./form.css";
+import ToggleFormType from "./ToggleFormType";
 import { useCharacterStore } from "../../../Provider/CharacterStoreProvider";
-import Form from "./Form";
+import CharacterForm from "./CharacterForm";
 
 const NewCharacterForm = () => {
 	const characterStore = useCharacterStore();
@@ -40,14 +40,15 @@ const NewCharacterForm = () => {
 	console.log(character, "<-- submit");
 
 	return (
-		<div className='container'>
+		<>
+			<ToggleFormType />
 			<h3>Create a new character</h3>
-			<Form
+			<CharacterForm
 				character={character}
 				handleChange={handleChange}
 				handleSubmit={handleSubmit}
 			/>
-		</div>
+		</>
 	);
 };
 
