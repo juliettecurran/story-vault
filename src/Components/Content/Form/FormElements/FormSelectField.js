@@ -1,5 +1,5 @@
 import React from "react";
-import characterSelectOptions from "../../../../characterOptionsData";
+import characterSelectOptions from "../../../../Utils/characterOptionsData";
 import Label from "./Label.js";
 
 const FormSelectField = ({ name, value, onChange, label, options }) => {

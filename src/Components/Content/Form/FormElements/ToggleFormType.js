@@ -1,5 +1,5 @@
 import React from "react";
-import NavButton from "../../../Head/NavButton";
+import NavButton from "../../../Head/Navbar/NavButton";
 import { useHistory } from "react-router-dom";
 
 const ToggleFormType = () => {

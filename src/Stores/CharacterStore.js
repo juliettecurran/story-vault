@@ -4,7 +4,7 @@ import {
 	setSessionValue,
 	getSessionValue,
 	removeSessionValue,
-} from "../helpers";
+} from "../Utils/helpers";
 
 class CharacterStore {
 	/* ------- init characterList array ------- */
