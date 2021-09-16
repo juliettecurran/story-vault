@@ -1,21 +1,24 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, useParams, useHistory } from "react-router-dom";
 import "./head.css";
+import NavButton from "./NavButton";
 
 const Navbar = () => {
+	let params = useParams();
+	let history = useHistory();
+	const activePath = history.location.pathname;
+	console.log(history.location.pathname);
 	return (
 		<nav className='Navbar__navbar'>
-			<Link to='/' className='Navbar__navLink'>
+			<NavButton to='/' active={activePath}>
 				Home
-			</Link>
-
-			<Link to='/all' className='Navbar__navLink'>
-				Characters
-			</Link>
-
-			<Link to='/new' className='Navbar__navLink'>
-				New Character
-			</Link>
+			</NavButton>
+			<NavButton to='/all' active={activePath}>
+				All
+			</NavButton>
+			<NavButton to='/new/character' active={activePath}>
+				New
+			</NavButton>
 		</nav>
 	);
 };
