@@ -1,0 +1,20 @@
+/* Header */
+.CharacterList__flexContainer {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	justify-content: space-around;
+	align-items: normal;
+	align-content: normal;
+	width: 100%;
+	align-items: center;
+}
+
+.CharacterList__flexItem {
+	display: block;
+	flex-grow: 0;
+	flex-shrink: 1;
+	flex-basis: auto;
+	align-self: auto;
+	order: 0;
+}
