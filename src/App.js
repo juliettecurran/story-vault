@@ -1,14 +1,14 @@
 import "./App.css";
-import Header from "./Components/Head/Header";
-import Navbar from "./Components/Head/Navbar";
+import Header from "./Components/Head/Header/Header";
+import Navbar from "./Components/Head/Navbar/Navbar.js";
 import Home from "./Components/Content/Home";
 import CharacterList from "./Components/Content/Characters/CharacterList";
-import NewCharacterForm from "./Components/Content/Form/NewCharacterForm";
+import NewCharacterForm from "./Components/Content/Form/CharacterForm/NewCharacterForm";
 import NewLocationForm from "./Components/Content/Form/LocationForm/NewLocationForm";
-import SingleCharacter from "./Components/Content/SingleCharacter";
+import SingleCharacter from "./Components/Content/Characters/SingleCharacter";
 import Footer from "./Components/Footer/Footer";
 import { BrowserRouter, Route, Switch } from "react-router-dom";
-import EditCharacterForm from "./Components/Content/Form/EditCharacterForm";
+import EditCharacterForm from "./Components/Content/Form/CharacterForm/EditCharacterForm";
 
 function App() {
 	return (
