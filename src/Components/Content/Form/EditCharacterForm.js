@@ -1,13 +1,12 @@
 import React, { useEffect } from "react";
 import { useHistory, useParams } from "react-router-dom";
-import Form from "./Form";
+import CharacterForm from "./CharacterForm";
 import { useCharacterStore } from "../../../Provider/CharacterStoreProvider";
 
 const EditCharacterForm = () => {
 	let params = useParams();
 	let history = useHistory();
 	const id = params.character_id;
-	const characterStore = useCharacterStore();
 	const { characterById, updateCharacter } = useCharacterStore();
 	const [character, setCharacter] = React.useState({});
 
@@ -34,16 +33,14 @@ const EditCharacterForm = () => {
 
 	console.log(character, "<-- character State");
 	return (
-		<div>
-			<p>edit forms</p>
-			1. get id from url - useParams /useHistory filter chars by
-			params.character_id >> get data use effect
-			<Form
+		<>
+			<h3>Edit character</h3>
+			<CharacterForm
 				character={character}
 				handleChange={handleChange}
 				handleSubmit={handleSubmit}
 			/>
-		</div>
+		</>
 	);
 };
 
