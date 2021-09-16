@@ -1,40 +1,63 @@
-import React from 'react'
-import { useCharacterStore } from '../../../Provider/CharacterStoreProvider'
-import { observer } from 'mobx-react'
-import './characters.css'
+import React from "react";
+import { useHistory } from "react-router-dom";
+import { useCharacterStore } from "../../../Provider/CharacterStoreProvider";
+import { observer } from "mobx-react";
+
+import "./characters.css";
 
 const CharacterList = () => {
-    const { characterList } = useCharacterStore() 
-    return (
-      
-   <div className="characterList">
-    <p>A list of character text or picture links should be here</p>
+	let history = useHistory();
+	const characterStore = useCharacterStore();
+	const { characterList } = useCharacterStore();
+	console.log(characterList);
+	console.log(characterStore, "characterStore");
 
-      {characterList.map((character) => {
-        const { characterId, title, name } = character;
-          return (
-            <article key={characterId} className="character-grid">
-              
-                  <h4 className="characterName">
-                    {title} {name} {/*Will be link to single character page */}
-                  </h4>
-                
-                <button type="edit" className="editBtn">
-                   Edit
-                </button> 
-                <button type="Delete" className="deleteBtn">
-                   Delete
-                </button> 
-            </article>
-          );
-        })}
+	const handleDelete = (Id) => {
+		console.log(Id, "handleDelete");
+		characterStore.deleteCharacter(Id);
+	};
 
-{/* ------- map over characterList array by ID and print only names ------- */}
+	const handleEdit = (Id) => {
+		console.log(Id, "handleEdit");
+		history.push(`/edit/${Id}`);
+	};
 
-          
+	return (
+		<div className='characterList__container'>
+			<h3>Characters in vault</h3>
+			{characterList.map((character) => {
+				const { Id, title, name, characterType } = character;
 
-        </div>
-    )
-}
+				return (
+					<article key={Id} className='characterList__characterGrid'>
+						<h4 className='characterList__displayCharacterName'>
+							{title} {name} {/*Will be link to single character page */}
+						</h4>
 
-export default observer(CharacterList)
+						<h4 className='characterList__displayCharacterType'>
+							{characterType}
+						</h4>
+
+						<button
+							onClick={() => handleEdit(Id)}
+							type='edit'
+							className='characterList__editCharacterBtn'
+						>
+							Edit
+						</button>
+
+						<button
+							onClick={() => handleDelete(Id)}
+							type='delete'
+							className='characterList__deleteCharacterBtn'
+						>
+							Delete
+						</button>
+					</article>
+				);
+			})}
+		</div>
+	);
+};
+
+export default observer(CharacterList);
