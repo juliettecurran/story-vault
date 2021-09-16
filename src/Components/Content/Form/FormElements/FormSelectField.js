@@ -1,6 +1,6 @@
 import React from "react";
 import characterSelectOptions from "../../../../characterOptionsData";
-import Label from "../Label";
+import Label from "./Label.js";
 
 const FormSelectField = ({ name, value, onChange, label, options }) => {
 	const typeOptions = characterSelectOptions[options];
