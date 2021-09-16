@@ -2,17 +2,20 @@ import React from "react";
 import { useCharacterStore } from "../../Provider/CharacterStoreProvider";
 import { observer } from "mobx-react";
 import "./head.css";
+import { pluralise } from "../../helpers.js";
 
 const Header = () => {
 	const { totalCharacters } = useCharacterStore();
+	const characterCount = `${totalCharacters} ${pluralise(
+		totalCharacters,
+		"character",
+		"characters"
+	)} created`;
+	console.log(totalCharacters);
 	return (
 		<header className='CharacterList__flexContainer'>
 			<h2 className='CharacterList__flexItem'>Story Vault</h2>
-			<h4 className='CharacterList__flexItem'>
-				{totalCharacters} character(s) created
-			</h4>
-
-			{/*how to ternary plural when > 1 */}
+			<h4 className='CharacterList__flexItem'>{characterCount}</h4>
 		</header>
 	);
 };
