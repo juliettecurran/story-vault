@@ -1,7 +1,7 @@
 import React from "react";
-import ToggleFormType from "./ToggleFormType";
+import ToggleFormType from "./FormElements/ToggleFormType.js";
 import { useCharacterStore } from "../../../Provider/CharacterStoreProvider";
-import CharacterForm from "./CharacterForm";
+import CharacterForm from "./CharacterForm/CharacterForm";
 
 const NewCharacterForm = () => {
 	const characterStore = useCharacterStore();

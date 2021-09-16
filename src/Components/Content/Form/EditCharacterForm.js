@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import { useHistory, useParams } from "react-router-dom";
-import CharacterForm from "./CharacterForm";
+import CharacterForm from "./CharacterForm/CharacterForm";
 import { useCharacterStore } from "../../../Provider/CharacterStoreProvider";
 
 const EditCharacterForm = () => {
