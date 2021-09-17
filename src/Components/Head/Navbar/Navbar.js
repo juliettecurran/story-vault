@@ -1,10 +1,9 @@
 import React from "react";
-import { Link, useParams, useHistory } from "react-router-dom";
+import { useHistory } from "react-router-dom";
 import "./navbar.css";
 import NavButton from "./NavButton";
 
 const Navbar = () => {
-	let params = useParams();
 	let history = useHistory();
 	const activePath = history.location.pathname;
 	console.log(history.location.pathname);
