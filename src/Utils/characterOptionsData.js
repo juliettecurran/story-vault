@@ -8,14 +8,7 @@ export const characterSelectOptions = {
 		"Side-Character",
 	],
 
-	characterLocation: [
-		"Ocean",
-		"Mountain",
-		"Town",
-		"Mainland",
-		"Orphanage",
-		"Other",
-	],
+	characterLocation: ["Ocean", "Mountain", "Town", "Mainland", "Other"],
 
 	characterEyeColour: ["Blue", "Brown", "Green", "Other"],
 
