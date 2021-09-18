@@ -7,6 +7,8 @@ import Form from "../Form.js";
 const CharacterForm = ({ character, handleChange, handleSubmit }) => {
 	return (
 		<Form handleSubmit={handleSubmit}>
+			<h3>Create a new character</h3>
+			<hr></hr>
 			<FormTextInput
 				label='Title'
 				type='text'
