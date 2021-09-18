@@ -6,7 +6,6 @@ import NavButton from "./NavButton";
 const Navbar = () => {
 	let history = useHistory();
 	const activePath = history.location.pathname;
-	console.log(history.location.pathname);
 	return (
 		<nav className='Navbar__navbar'>
 			<NavButton to='/' active={activePath}>
