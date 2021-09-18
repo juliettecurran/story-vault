@@ -10,7 +10,7 @@ class LocationStore {
 	/* ------- init locationList array ------- */
 
 	locationList = getSessionValue("locationList") || [];
-	totallocations =
+	totalLocations =
 		(getSessionValue("locationList") &&
 			getSessionValue("locationList").length) ||
 		0;
