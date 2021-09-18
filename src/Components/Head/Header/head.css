@@ -18,3 +18,7 @@
 	align-self: auto;
 	order: 0;
 }
+
+ul {
+	list-style: none;
+}
