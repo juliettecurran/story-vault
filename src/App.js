@@ -1,14 +1,17 @@
 import "./App.css";
 import Header from "./Components/Head/Header/Header";
-import Navbar from "./Components/Head/Navbar/Navbar.js";
-import Home from "./Components/Content/Home";
-import CharacterList from "./Components/Content/Characters/CharacterList";
+import Navbar from "./Components/Head/Navbar/Navbar";
+import Home from "./Components/Content/Home/Home";
+import CharacterList from "./Components/Content/CharactersList/CharacterList";
 import NewCharacterForm from "./Components/Content/Form/CharacterForm/NewCharacterForm";
 import NewLocationForm from "./Components/Content/Form/LocationForm/NewLocationForm";
-import SingleCharacter from "./Components/Content/Characters/SingleCharacter";
+import SingleCharacter from "./Components/Content/SingleItemView/SingleCharacter/SingleCharacter";
+
 import Footer from "./Components/Footer/Footer";
 import { BrowserRouter, Route, Switch } from "react-router-dom";
 import EditCharacterForm from "./Components/Content/Form/CharacterForm/EditCharacterForm";
+import LocationList from "./Components/Content/LocationsList/LocationList";
+import SingleLocation from "./Components/Content/SingleItemView/SingleLocation/SingleLocation";
 
 function App() {
 	return (
@@ -16,7 +19,6 @@ function App() {
 			<BrowserRouter>
 				<div className='Header'>
 					<Header />
-					<Navbar />
 				</div>
 				<div className='Content'>
 					<Switch>
@@ -25,12 +27,16 @@ function App() {
 						</Route>
 						<Route exact path='/all'>
 							<CharacterList />
+							<LocationList />
 						</Route>
 						<Route exact path='/new/character'>
 							<NewCharacterForm />
 						</Route>
 						<Route exact path='/new/location'>
 							<NewLocationForm />
+						</Route>
+						<Route exact path='/location/:location_id'>
+							<SingleLocation />
 						</Route>
 						<Route exact path='/edit/:character_id'>
 							<EditCharacterForm />
