@@ -21,8 +21,6 @@ const EditCharacterForm = () => {
 			...character,
 			[e.target.name]: value,
 		});
-		console.log([e.target.name], value);
-		console.log(character, "<--handleChange");
 	}
 
 	function handleSubmit(event) {
@@ -31,7 +29,6 @@ const EditCharacterForm = () => {
 		history.push(`/all`);
 	}
 
-	console.log(character, "<-- character State");
 	return (
 		<>
 			<h3>Edit character</h3>
