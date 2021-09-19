@@ -15,16 +15,16 @@ const CharacterList = () => {
 	};
 
 	const handleEdit = (Id) => {
-		history.push(`/edit/${Id}`);
+		history.push(`/character/edit/${Id}`);
 	};
 
 	return (
-		<div>
+		<>
 			<h3>Characters</h3>
 			<div className='CharacterList__container'>
 				{characterList.map((character) => {
-					const { Id, title, name, characterType } = character;
-
+					const { Id, title, name } = character;
+					console.log(character);
 					return (
 						<article key={Id} className='CharacterList__characterCard'>
 							<Link to={`/character/${Id}`}>
@@ -55,7 +55,7 @@ const CharacterList = () => {
 					);
 				})}
 			</div>
-		</div>
+		</>
 	);
 };
 
