@@ -14,7 +14,7 @@ const LocationList = () => {
 	}; //make these handlers reusable
 
 	const handleEdit = (Id) => {
-		history.push(`/edit/${Id}`);
+		history.push(`/location/edit/${Id}`);
 	};
 
 	return (
