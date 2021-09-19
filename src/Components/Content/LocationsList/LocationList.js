@@ -18,39 +18,43 @@ const LocationList = () => {
 	};
 
 	return (
-		<div className='locationList__container'>
+		<>
 			<h3>Locations in vault</h3>
-			{locationList.map((location) => {
-				const { Id, name, ruler, symbol } = location;
+			<div className='LocationList__container'>
+				{locationList.map((location) => {
+					const { Id, name } = location;
 
-				return (
-					<article key={Id} className='locationList__locationGrid'>
-						<Link to={`/location/${Id}`}>
-							<h4 className='locationList__displayLocationName'>
-								{name} {ruler} {/*Will be link to single location page */}
-							</h4>
-						</Link>
-						<h4 className='locationList__displaylocationSymbol'>{symbol}</h4>
+					return (
+						<article key={Id} className='LocationList__locationCard'>
+							<Link to={`/location/${Id}`}>
+								<img src='https://via.placeholder.com/250'></img>
+								<h4 className='LocationList__displayLocationName'>
+									{name} {/*Will be link to single location page */}
+								</h4>
+							</Link>
 
-						<button
-							onClick={() => handleEdit(Id)}
-							type='edit'
-							className='locationList__editLocationBtn'
-						>
-							Edit
-						</button>
+							<div className='LocationList__btnGroup'>
+								<button
+									onClick={() => handleEdit(Id)}
+									type='edit'
+									className='LocationList__editLocationBtn'
+								>
+									Edit
+								</button>
 
-						<button
-							onClick={() => handleDelete(Id)}
-							type='delete'
-							className='locationList__deleteLocationBtn'
-						>
-							Delete
-						</button>
-					</article>
-				);
-			})}
-		</div>
+								<button
+									onClick={() => handleDelete(Id)}
+									type='delete'
+									className='LocationList__deleteLocationBtn'
+								>
+									Delete
+								</button>
+							</div>
+						</article>
+					);
+				})}
+			</div>
+		</>
 	);
 };
 
