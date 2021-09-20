@@ -1,0 +1,9 @@
+.Divider__styled {
+	height: 4px;
+	background: #e45b00; /*#f00;*/
+	position: absolute;
+	width: 40%;
+	top: 50%;
+	border: none;
+	margin-top: -2px;
+}
