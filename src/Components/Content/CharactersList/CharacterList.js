@@ -2,8 +2,8 @@ import React from "react";
 import { useHistory, Link } from "react-router-dom";
 import { useCharacterStore } from "../../../Provider/CharacterStoreProvider";
 import { observer } from "mobx-react";
-
 import "./characters.css";
+import Divider from "../MiscElements/Divider";
 
 const CharacterList = () => {
 	let history = useHistory();
@@ -20,18 +20,20 @@ const CharacterList = () => {
 
 	return (
 		<>
-			<h3>Characters</h3>
+			<h3 className='CharacterList__listTitle'>
+				Characters
+				<Divider />
+			</h3>
 			<div className='CharacterList__container'>
 				{characterList.map((character) => {
 					const { Id, title, name } = character;
-					console.log(character);
 					return (
 						<article key={Id} className='CharacterList__characterCard'>
 							<Link to={`/character/${Id}`}>
+								<h5 className='CharacterList__displayCharacterName'>
+									{title} {name}
+								</h5>
 								<img src='https://via.placeholder.com/250'></img>
-								<h4 className='CharacterList__displayCharacterName'>
-									{title} {name} {/*Will be link to single character page */}
-								</h4>
 							</Link>
 
 							<div className='CharacterList__btnGroup'>
