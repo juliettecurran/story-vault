@@ -3,6 +3,7 @@ import "./locationForm.css";
 import FormSelectField from "../FormElements/FormSelectField";
 import FormTextInput from "../FormElements/FormTextInput";
 import Form from "../Form.js";
+import SubmitBtn from "../FormElements/SubmitBtn";
 
 const LocationForm = ({ location, handleChange, handleSubmit }) => {
 	return (
@@ -93,9 +94,7 @@ const LocationForm = ({ location, handleChange, handleSubmit }) => {
 				onChange={handleChange}
 			/>
 
-			<button type='submit' className='submitBtn'>
-				Submit
-			</button>
+			<SubmitBtn />
 		</Form>
 	);
 };

@@ -3,6 +3,7 @@ import "./characterForm.css";
 import FormSelectField from "../FormElements/FormSelectField";
 import FormTextInput from "../FormElements/FormTextInput";
 import Form from "../Form.js";
+import SubmitBtn from "../FormElements/SubmitBtn";
 
 const CharacterForm = ({ character, handleChange, handleSubmit }) => {
 	return (
@@ -102,9 +103,7 @@ const CharacterForm = ({ character, handleChange, handleSubmit }) => {
 				onChange={handleChange}
 			/>
 
-			<button type='submit' className='submitBtn'>
-				Submit
-			</button>
+			<SubmitBtn />
 		</Form>
 	);
 };
