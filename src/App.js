@@ -1,4 +1,5 @@
 import "./App.css";
+import ReactDOM from "react-dom";
 import Header from "./Components/Head/Header/Header";
 import Navbar from "./Components/Head/Navbar/Navbar";
 import Home from "./Components/Content/Home/Home";
@@ -12,6 +13,7 @@ import EditCharacterForm from "./Components/Content/Form/CharacterForm/EditChara
 import LocationList from "./Components/Content/LocationsList/LocationList";
 import SingleLocation from "./Components/Content/SingleItemView/SingleLocation/SingleLocation";
 import EditLocationForm from "./Components/Content/Form/LocationForm/EditLocationForm";
+import { library } from "@fortawesome/fontawesome-svg-core";
 
 function App() {
 	return (
@@ -32,7 +34,7 @@ function App() {
 						<Route exact path='/new/character'>
 							<NewCharacterForm />
 						</Route>
-						<Route exact path='/edit/:character_id'>
+						<Route exact path='/character/edit/:character_id'>
 							<EditCharacterForm />
 						</Route>
 						<Route exact path='/character/:character_id'>
