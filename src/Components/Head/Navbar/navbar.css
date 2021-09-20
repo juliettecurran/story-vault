@@ -1,8 +1,7 @@
 .Navbar__navbar {
 	display: flex;
 	justify-content: space-evenly;
-	width: 50vw;
-	padding-bottom: 1em;
+	width: 35vw;
 	border: none;
 	color: white;
 }
