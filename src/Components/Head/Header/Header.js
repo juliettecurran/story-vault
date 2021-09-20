@@ -24,7 +24,9 @@ const Header = () => {
 
 	return (
 		<header className='CharacterList__flexContainer'>
-			<h2 className='CharacterList__flexItem'>Story Vault</h2>
+			<h2 className='CharacterList__flexItem CharacterList__title'>
+				Story Vault
+			</h2>
 			<Navbar className='CharacterList__flexItem' />
 			<ul className='CharacterList__flexItem'>
 				<li>{characterCount}</li>
