@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Satisfy&display=swap");
+
 .CharacterList__container {
 	display: flex;
 	flex-direction: row;
@@ -25,7 +27,7 @@
 .CharacterList__deleteCharacterBtn {
 	text-decoration: none;
 	padding: 0.5em;
-	background-color: #4c63af;
+	background-color: #028a6c;
 	border-radius: 8px;
 	cursor: pointer;
 	font-size: 14px;
@@ -36,27 +38,19 @@
 
 .CharacterList__editCharacterBtn:hover,
 .CharacterList__deleteCharacterBtn:hover {
-	background-color: #31478f;
+	background-color: #0c473b;
 }
 
 .CharacterList__btnGroup {
 	display: flex;
 	flex-direction: row;
 	width: 100%;
-	background-color: grey;
 	padding: 0.5em 0 0.5em 0;
 	justify-content: space-evenly;
 	align-items: center;
 	border-bottom-left-radius: 10px;
 	border-bottom-right-radius: 10px;
-}
-
-.CharacterList__displayCharacterName {
-	margin: 0.3em;
-}
-
-.CharacterList__displayCharacterName > a:link {
-	text-decoration: none;
+	background-color: white;
 }
 
 a:hover,
@@ -64,4 +58,20 @@ a:visited,
 a:link,
 a:active {
 	text-decoration: none;
+}
+
+.CharacterList__listTitle {
+	position: relative;
+	overflow: hidden;
+	font-family: "Satisfy", cursive;
+	font-size: 1.7em;
+}
+
+.CharacterList__displayCharacterName {
+	margin: 0; /*margin: 5% 0 5% 0;*/
+	color: white;
+	padding: 3% 0 3% 0;
+	background-color: #e45b00;
+	border-top-left-radius: 10px;
+	border-top-right-radius: 10px;
 }
