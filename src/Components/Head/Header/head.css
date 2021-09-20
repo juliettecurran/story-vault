@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Satisfy&display=swap");
+
 /* Header */
 .CharacterList__flexContainer {
 	display: flex;
@@ -8,6 +10,19 @@
 	align-content: normal;
 	width: 100%;
 	align-items: center;
+	color: white;
+}
+
+.CharacterList__title {
+	font-family: "Satisfy", cursive;
+	font-size: 2em;
+	margin-bottom: 12px;
+	margin-top: 12px;
+	transform: skew(5deg, -5deg);
+	text-shadow: 1px 0px 1px #0c473b, 0px 1px 1px #eee, 2px 1px 1px #0c473b,
+		1px 2px 1px #eee, 3px 2px 1px #0c473b, 2px 3px 1px #eee, 4px 3px 1px #0c473b,
+		3px 4px 1px #eee, 5px 4px 1px #0c473b, 4px 5px 1px #eee, 6px 5px 1px #0c473b,
+		5px 6px 1px #eee, 7px 6px 1px #0c473b;
 }
 
 .CharacterList__flexItem {
@@ -21,4 +36,5 @@
 
 ul {
 	list-style: none;
+	font-size: 0.8em;
 }
