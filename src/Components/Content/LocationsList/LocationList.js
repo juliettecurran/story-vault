@@ -3,6 +3,7 @@ import { useHistory, Link } from "react-router-dom";
 import { useLocationStore } from "../../../Provider/LocationStoreProvider";
 import { observer } from "mobx-react";
 import "./locations.css";
+import Divider from "../MiscElements/Divider";
 
 const LocationList = () => {
 	let history = useHistory();
@@ -19,7 +20,10 @@ const LocationList = () => {
 
 	return (
 		<>
-			<h3>Locations in vault</h3>
+			<h3 className='LocationList__listTitle'>
+				<Divider />
+				Locations
+			</h3>
 			<div className='LocationList__container'>
 				{locationList.map((location) => {
 					const { Id, name } = location;
@@ -28,9 +32,9 @@ const LocationList = () => {
 						<article key={Id} className='LocationList__locationCard'>
 							<Link to={`/location/${Id}`}>
 								<img src='https://via.placeholder.com/250'></img>
-								<h4 className='LocationList__displayLocationName'>
+								<h5 className='LocationList__displayLocationName'>
 									{name} {/*Will be link to single location page */}
-								</h4>
+								</h5>
 							</Link>
 
 							<div className='LocationList__btnGroup'>
