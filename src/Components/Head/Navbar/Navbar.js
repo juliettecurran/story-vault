@@ -15,7 +15,7 @@ const Navbar = () => {
 				All
 			</NavButton>
 			<NavButton to='/new/character' active={activePath}>
-				New
+				Create
 			</NavButton>
 		</nav>
 	);
