@@ -4,6 +4,7 @@ import { useLocationStore } from "../../../Provider/LocationStoreProvider";
 import { observer } from "mobx-react";
 import "./locations.css";
 import Divider from "../MiscElements/Divider";
+import ItemCard from "../CharactersList/ItemCard";
 
 const LocationList = () => {
 	let history = useHistory();
@@ -29,32 +30,35 @@ const LocationList = () => {
 					const { Id, name } = location;
 
 					return (
-						<article key={Id} className='LocationList__locationCard'>
-							<Link to={`/location/${Id}`}>
-								<h5 className='LocationList__displayLocationName'>
-									{name} {/*Will be link to single location page */}
-								</h5>
-								<img src='https://via.placeholder.com/250' alt=''></img>
-							</Link>
+						<>
+							<article key={Id} className='LocationList__locationCard'>
+								<Link to={`/location/${Id}`}>
+									<h5 className='LocationList__displayLocationName'>
+										{name} {/*Will be link to single location page */}
+									</h5>
+									<img src='https://via.placeholder.com/250' alt=''></img>
+								</Link>
 
-							<div className='LocationList__btnGroup'>
-								<button
-									onClick={() => handleEdit(Id)}
-									type='edit'
-									className='LocationList__editLocationBtn'
-								>
-									Edit
-								</button>
+								<div className='LocationList__btnGroup'>
+									<button
+										onClick={() => handleEdit(Id)}
+										type='edit'
+										className='LocationList__editLocationBtn'
+									>
+										Edit
+									</button>
 
-								<button
-									onClick={() => handleDelete(Id)}
-									type='delete'
-									className='LocationList__deleteLocationBtn'
-								>
-									Delete
-								</button>
-							</div>
-						</article>
+									<button
+										onClick={() => handleDelete(Id)}
+										type='delete'
+										className='LocationList__deleteLocationBtn'
+									>
+										Delete
+									</button>
+								</div>
+							</article>
+							<ItemCard />
+						</>
 					);
 				})}
 			</div>
