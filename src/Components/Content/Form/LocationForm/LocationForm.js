@@ -1,6 +1,5 @@
 import React from "react";
 import "./locationForm.css";
-import FormSelectField from "../FormElements/FormSelectField";
 import FormTextInput from "../FormElements/FormTextInput";
 import Form from "../Form.js";
 import SubmitBtn from "../FormElements/SubmitBtn";
@@ -9,13 +8,13 @@ const LocationForm = ({ location, handleChange, handleSubmit }) => {
 	return (
 		<Form handleSubmit={handleSubmit}>
 			<h3>Create a new location</h3>
-			<hr></hr>
+			<hr className='LocationForm__titleDivider'></hr>
 			<FormTextInput
 				label='Name'
 				type='text'
 				name='name'
 				value={location.name}
-				placeholder='Lord'
+				placeholder='Seadell'
 				onChange={handleChange}
 			/>
 
@@ -24,7 +23,7 @@ const LocationForm = ({ location, handleChange, handleSubmit }) => {
 				type='text'
 				name='demonym'
 				value={location.demonym}
-				placeholder='British'
+				placeholder='Dellan'
 				onChange={handleChange}
 			/>
 
@@ -42,7 +41,7 @@ const LocationForm = ({ location, handleChange, handleSubmit }) => {
 				type='text'
 				name='ruler'
 				value={location.ruler}
-				placeholder='Parliament'
+				placeholder='Monarchy'
 				onChange={handleChange}
 			/>
 			<FormTextInput
@@ -74,7 +73,7 @@ const LocationForm = ({ location, handleChange, handleSubmit }) => {
 				type='text'
 				name='dominantReligion'
 				value={location.dominantReligion}
-				placeholder='Atheism'
+				placeholder='Pantheism'
 				onChange={handleChange}
 			/>
 			<FormTextInput
