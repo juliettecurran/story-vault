@@ -13,6 +13,7 @@ class Location {
 		this.dominantReligion = data.dominantReligion;
 		this.language = data.language;
 		this.symbol = data.symbol;
+		this.citizens = data.citizens;
 	}
 }
 
