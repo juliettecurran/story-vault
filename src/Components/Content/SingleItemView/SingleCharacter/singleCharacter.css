@@ -1,0 +1,31 @@
+.singleCharacter__container {
+	display: flex;
+	flex-direction: column;
+}
+
+.singleCharacter__image {
+	align-self: center;
+}
+
+.singleCharacter__table {
+	display: inline-block;
+	align-self: center;
+}
+
+td {
+	text-align: center;
+	padding: 8px 13px 8px 13px;
+	background-color: #dbdbdb;
+}
+
+.singleCharacter__label {
+	font-weight: 600;
+	background-color: chocolate;
+	color: white;
+	font-size: 90%;
+}
+
+.singleCharacter__value {
+	background-color: #dbdbdb;
+	font-size: 80%;
+}

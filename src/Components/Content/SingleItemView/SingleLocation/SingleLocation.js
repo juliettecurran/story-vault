@@ -1,32 +1,79 @@
 import React from "react";
 import { useParams } from "react-router-dom";
 import { useLocationStore } from "../../../../Provider/LocationStoreProvider";
+import "./singleLocation.css";
 
 const SingleLocation = () => {
 	const params = useParams();
 	const id = params.location_id;
-
 	const { locationById } = useLocationStore();
 	const mySingleLocation = locationById(id);
-	console.log(id, "<<< id");
-	console.log(mySingleLocation, "single");
-	//bbbd6826-5a18-42d2-ae6b-02e2bc59ef1b
 
 	return (
-		<div className='locationList__container'>
-			<p>Single location page</p>
-			<article key={id} className='locationList__locationGrid'>
-				<p>{mySingleLocation.name}</p>
-				<p>{mySingleLocation.demonym}</p>
-				<p>{mySingleLocation.size}</p>
-				<p>{mySingleLocation.ruler}</p>
-				<p>{mySingleLocation.population}</p>
-				<p>{mySingleLocation.geography}</p>
-				<p>{mySingleLocation.culturalTrait}</p>
-				<p>{mySingleLocation.dominantReligion}</p>
-				<p>{mySingleLocation.language}</p>
-				<p>{mySingleLocation.symbol}</p>
-			</article>
+		<div className='singleLocation__container'>
+			<img
+				className='singleLocation__image'
+				src='https://via.placeholder.com/300'
+				alt=''
+			></img>
+
+			<table className='singleLocation__table'>
+				<thead></thead>
+				<tbody>
+					<tr>
+						<td className='singleLocation__label'>Name</td>
+						<td className='singleLocation__value'>{mySingleLocation.name}</td>
+					</tr>
+					<tr>
+						<td className='singleLocation__label'>Demonym</td>
+						<td className='singleLocation__value'>
+							{mySingleLocation.demonym}
+						</td>
+					</tr>
+					<tr>
+						<td className='singleLocation__label'>Size</td>
+						<td className='singleLocation__value'>{mySingleLocation.size}</td>
+					</tr>
+					<tr>
+						<td className='singleLocation__label'>Ruler</td>
+						<td className='singleLocation__value'>{mySingleLocation.ruler}</td>
+					</tr>
+					<tr>
+						<td className='singleLocation__label'>Population</td>
+						<td className='singleLocation__value'>
+							{mySingleLocation.population}
+						</td>
+					</tr>
+					<tr>
+						<td className='singleLocation__label'>Geography</td>
+						<td className='singleLocation__value'>
+							{mySingleLocation.geography}
+						</td>
+					</tr>
+					<tr>
+						<td className='singleLocation__label'>Cultural Trait</td>
+						<td className='singleLocation__value'>
+							{mySingleLocation.culturalTrait}
+						</td>
+					</tr>
+					<tr>
+						<td className='singleLocation__label'>Dominant Religion</td>
+						<td className='singleLocation__value'>
+							{mySingleLocation.dominantReligion}
+						</td>
+					</tr>
+					<tr>
+						<td className='singleLocation__label'>Language</td>
+						<td className='singleLocation__value'>
+							{mySingleLocation.language}
+						</td>
+					</tr>
+					<tr>
+						<td className='singleLocation__label'>Symbol</td>
+						<td className='singleLocation__value'>{mySingleLocation.symbol}</td>
+					</tr>
+				</tbody>
+			</table>
 		</div>
 	);
 };

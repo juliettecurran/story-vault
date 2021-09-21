@@ -1,32 +1,83 @@
 import React from "react";
 import { useParams } from "react-router-dom";
 import { useCharacterStore } from "../../../../Provider/CharacterStoreProvider";
+import "./singleCharacter.css";
 
 const SingleCharacter = () => {
 	const params = useParams();
 	const id = params.character_id;
-
 	const { characterById } = useCharacterStore();
 	const mySingleCharacter = characterById(id);
-	console.log(id, "<<< id");
-	console.log(mySingleCharacter, "single");
-	//bbbd6826-5a18-42d2-ae6b-02e2bc59ef1b
 
 	return (
-		<div className='characterList__container'>
-			<p>Single character page</p>
-			<article key={id} className='characterList__characterGrid'>
-				<p>{mySingleCharacter.title}</p>
-				<p>{mySingleCharacter.name}</p>
-				<p>{mySingleCharacter.characterType}</p>
-				<p>{mySingleCharacter.age}</p>
-				<p>{mySingleCharacter.occupation}</p>
-				<p>{mySingleCharacter.eyeColour}</p>
-				<p>{mySingleCharacter.hairColour}</p>
-				<p>{mySingleCharacter.location}</p>
-				<p>{mySingleCharacter.mainTrait}</p>
-				<p>{mySingleCharacter.specialAbility}</p>
-			</article>
+		<div className='singleCharacter__container'>
+			<img
+				className='singleCharacter__image'
+				src='https://via.placeholder.com/300'
+				alt=''
+			></img>
+
+			<table className='singleCharacter__table'>
+				<thead></thead>
+				<tbody>
+					<tr>
+						<td className='singleCharacter__label'>Title</td>
+						<td className='singleCharacter__value'>
+							{mySingleCharacter.title}
+						</td>
+					</tr>
+					<tr>
+						<td className='singleCharacter__label'>Name</td>
+						<td className='singleCharacter__value'>{mySingleCharacter.name}</td>
+					</tr>
+					<tr>
+						<td className='singleCharacter__label'>Role</td>
+						<td className='singleCharacter__value'>
+							{mySingleCharacter.characterType}
+						</td>
+					</tr>
+					<tr>
+						<td className='singleCharacter__label'>Age</td>
+						<td className='singleCharacter__value'>{mySingleCharacter.age}</td>
+					</tr>
+					<tr>
+						<td className='singleCharacter__label'>Job</td>
+						<td className='singleCharacter__value'>
+							{mySingleCharacter.occupation}
+						</td>
+					</tr>
+					<tr>
+						<td className='singleCharacter__label'>Eye Colour</td>
+						<td className='singleCharacter__value'>
+							{mySingleCharacter.eyeColour}
+						</td>
+					</tr>
+					<tr>
+						<td className='singleCharacter__label'>Hair Colour</td>
+						<td className='singleCharacter__value'>
+							{mySingleCharacter.hairColour}
+						</td>
+					</tr>
+					<tr>
+						<td className='singleCharacter__label'>Location</td>
+						<td className='singleCharacter__value'>
+							{mySingleCharacter.location}
+						</td>
+					</tr>
+					<tr>
+						<td className='singleCharacter__label'>Main Trait</td>
+						<td className='singleCharacter__value'>
+							{mySingleCharacter.mainTrait}
+						</td>
+					</tr>
+					<tr>
+						<td className='singleCharacter__label'>Special Ability</td>
+						<td className='singleCharacter__value'>
+							{mySingleCharacter.specialAbility}
+						</td>
+					</tr>
+				</tbody>
+			</table>
 		</div>
 	);
 };

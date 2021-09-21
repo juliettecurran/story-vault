@@ -1,0 +1,31 @@
+.singleLocation__container {
+	display: flex;
+	flex-direction: column;
+}
+
+.singleLocation__image {
+	align-self: center;
+}
+
+.singleLocation__table {
+	display: inline-block;
+	align-self: center;
+}
+
+td {
+	text-align: center;
+	padding: 9px 16px 8px 16px;
+	background-color: #dbdbdb;
+}
+
+.singleLocation__label {
+	font-weight: 600;
+	background-color: chocolate;
+	color: white;
+	font-size: 90%;
+}
+
+.singleLocation__value {
+	background-color: #dbdbdb;
+	font-size: 80%;
+}
