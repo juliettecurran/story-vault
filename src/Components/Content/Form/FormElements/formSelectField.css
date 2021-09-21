@@ -1,0 +1,11 @@
+.FormSelectField__container {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	justify-content: space-between;
+	width: 100%;
+	align-items: baseline;
+}
+.FormSelectField__select {
+	width: 70%;
+}

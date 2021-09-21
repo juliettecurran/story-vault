@@ -10,13 +10,13 @@ const FormTextInput = ({
 	onChange,
 	label,
 	min,
-	max,
+	max
 }) => {
 	return (
 		<div className='FormTextInput__container'>
-			<Label name={name} label={label} className='FormTextInput__item' />
+			<Label name={name} label={label} className='FormTextInput__label' />
 			<input
-				className='formTextInput FormTextInput__item'
+				className='FormTextInput__input'
 				type={type} //'text'
 				name={name} //'occupation'
 				value={value} //character.occupation
