@@ -1,18 +1,22 @@
-export const characterSelectOptions = {
+export const selectOptions = {
 	characterType: [
 		"Protagonist",
 		"Antagonist",
 		"Love Interest",
 		"Mentor",
 		"Friend",
-		"Side-Character",
+		"Side-Character"
 	],
 
 	characterLocation: ["Ocean", "Mountain", "Town", "Mainland", "Other"],
 
 	characterEyeColour: ["Blue", "Brown", "Green", "Other"],
 
-	characterHairColour: ["Brunette", "Blonde", "Ginger", "Black", "White"],
+	characterHairColour: ["Brunette", "Blonde", "Ginger", "Black", "White"]
+
+	/* 	characterList: */
+
+	
 };
 
-export default characterSelectOptions;
+export default selectOptions;
