@@ -17,17 +17,25 @@ const NewLocationForm = () => {
 		dominantReligion: "",
 		language: "",
 		symbol: "",
+		citizens: []
 	};
 
 	const [location, setLocation] = React.useState(defaultState);
+	const [citizens, setCitizens] = React.useState([]);
 
 	const handleChange = (e) => {
 		const value = e.target.value;
 		setLocation({
 			...location,
-			[e.target.name]: value,
+			[e.target.name]: value
 		});
 	};
+
+	const handleCheckboxChange = (id) => {
+		citizens.push(setCitizens(id));
+		/* 	citizens.push(id); */
+	};
+	console.log(citizens, "citizens");
 
 	function handleSubmit(event) {
 		event.preventDefault();
@@ -42,6 +50,7 @@ const NewLocationForm = () => {
 				location={location}
 				handleChange={handleChange}
 				handleSubmit={handleSubmit}
+				handleCheckboxChange={handleCheckboxChange}
 			/>
 		</>
 	);

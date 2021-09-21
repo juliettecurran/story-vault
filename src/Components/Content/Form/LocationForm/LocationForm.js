@@ -1,10 +1,25 @@
 import React from "react";
 import "./locationForm.css";
 import FormTextInput from "../FormElements/FormTextInput";
+import FormSelectField from "../FormElements/FormSelectField";
+import { useCharacterStore } from "../../../../Provider/CharacterStoreProvider";
+import { toJS } from "mobx";
 import Form from "../Form.js";
 import SubmitBtn from "../FormElements/SubmitBtn";
 
-const LocationForm = ({ location, handleChange, handleSubmit }) => {
+const LocationForm = ({
+	location,
+	handleChange,
+	handleSubmit,
+	handleCheckboxChange
+}) => {
+	const characterStore = useCharacterStore();
+	const { characterList } = useCharacterStore();
+	console.log(toJS(characterList));
+
+	const handleLocationChange = (id) => {
+		console.log(id, "handleLocationChange");
+	};
 	return (
 		<Form handleSubmit={handleSubmit}>
 			<h3>Create a new location</h3>
@@ -27,22 +42,22 @@ const LocationForm = ({ location, handleChange, handleSubmit }) => {
 				onChange={handleChange}
 			/>
 
-			<FormTextInput
-				label='Size'
-				type='text'
+			<FormSelectField
 				name='size'
+				label='Size'
+				type='select'
 				value={location.size}
-				placeholder='Large'
 				onChange={handleChange}
+				options='locationSize'
 			/>
 
-			<FormTextInput
-				label='Ruler'
-				type='text'
+			<FormSelectField
 				name='ruler'
+				label='Ruler'
+				type='select'
 				value={location.ruler}
-				placeholder='Monarchy'
 				onChange={handleChange}
+				options='locationRuler'
 			/>
 			<FormTextInput
 				label='Population'
@@ -52,13 +67,13 @@ const LocationForm = ({ location, handleChange, handleSubmit }) => {
 				placeholder='1000'
 				onChange={handleChange}
 			/>
-			<FormTextInput
-				label='Geography'
-				type='text'
+			<FormSelectField
 				name='geography'
+				label='Geography'
+				type='select'
 				value={location.geography}
-				placeholder='Desert'
 				onChange={handleChange}
+				options='locationGeography'
 			/>
 			<FormTextInput
 				label='Cultural Trait'
@@ -93,6 +108,19 @@ const LocationForm = ({ location, handleChange, handleSubmit }) => {
 				onChange={handleChange}
 			/>
 
+			{characterList.map((character, index) => {
+				return (
+					<div key={index}>
+						{character.name}
+						<input
+							name={character.name}
+							type='checkbox'
+							checked={false}
+							onChange={() => handleLocationChange(character.Id)}
+						/>
+					</div>
+				);
+			})}
 			<SubmitBtn />
 		</Form>
 	);
