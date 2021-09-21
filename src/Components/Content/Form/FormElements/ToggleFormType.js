@@ -1,6 +1,6 @@
 import React from "react";
-import NavButton from "../../../Head/Navbar/NavButton";
 import { useHistory } from "react-router-dom";
+import NavButton from "../../../Head/Navbar/NavButton";
 import "./toggleFormType.css";
 
 const ToggleFormType = () => {
@@ -8,10 +8,20 @@ const ToggleFormType = () => {
 	const activePath = history.location.pathname;
 	return (
 		<div className='formToggle'>
-			<NavButton to='/new/character' active={activePath}>
+			<NavButton
+				formToggleStyle
+				to='/new/character'
+				active={activePath}
+				className='ToggleFormType_toggleBtn'
+			>
 				New Character
 			</NavButton>
-			<NavButton to='/new/location' active={activePath}>
+			<NavButton
+				formToggleStyle
+				to='/new/location'
+				active={activePath}
+				className='ToggleFormType_toggleBtn'
+			>
 				New Location
 			</NavButton>
 		</div>
