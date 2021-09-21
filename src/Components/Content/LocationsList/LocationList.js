@@ -31,10 +31,10 @@ const LocationList = () => {
 					return (
 						<article key={Id} className='LocationList__locationCard'>
 							<Link to={`/location/${Id}`}>
-								<img src='https://via.placeholder.com/250'></img>
 								<h5 className='LocationList__displayLocationName'>
 									{name} {/*Will be link to single location page */}
 								</h5>
+								<img src='https://via.placeholder.com/250' alt=''></img>
 							</Link>
 
 							<div className='LocationList__btnGroup'>
