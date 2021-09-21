@@ -1,9 +1,10 @@
 import React from "react";
-import characterSelectOptions from "../../../../Utils/characterOptionsData";
+import selectOptions from "../../../../Utils/optionsData";
+
 import Label from "./Label.js";
 
 const FormSelectField = ({ name, value, onChange, label, options }) => {
-	const typeOptions = characterSelectOptions[options];
+	const typeOptions = selectOptions[options];
 	return (
 		<>
 			<Label name={name} label={label} />
@@ -18,4 +19,5 @@ const FormSelectField = ({ name, value, onChange, label, options }) => {
 	);
 };
 
+/* Make reusable */
 export default FormSelectField;
