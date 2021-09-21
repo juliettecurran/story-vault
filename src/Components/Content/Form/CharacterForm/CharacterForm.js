@@ -9,8 +9,7 @@ const CharacterForm = ({ character, handleChange, handleSubmit }) => {
 	return (
 		<Form handleSubmit={handleSubmit} className='form'>
 			<h3>Create a new character</h3>
-			<hr></hr>
-
+			<hr className='CharacterForm__titleDivider'></hr>
 			<FormTextInput
 				label='Title'
 				type='text'
@@ -19,7 +18,6 @@ const CharacterForm = ({ character, handleChange, handleSubmit }) => {
 				placeholder='Lord'
 				onChange={handleChange}
 			/>
-
 			<FormTextInput
 				label='Name'
 				type='text'
@@ -28,7 +26,6 @@ const CharacterForm = ({ character, handleChange, handleSubmit }) => {
 				placeholder='James Marshall'
 				onChange={handleChange}
 			/>
-
 			<FormTextInput
 				label='Age'
 				type='number'
@@ -39,7 +36,6 @@ const CharacterForm = ({ character, handleChange, handleSubmit }) => {
 				min={1}
 				max={100}
 			/>
-
 			<FormSelectField
 				name='characterType'
 				label='Character Type'
@@ -48,7 +44,6 @@ const CharacterForm = ({ character, handleChange, handleSubmit }) => {
 				onChange={handleChange}
 				options='characterType'
 			/>
-
 			<FormTextInput
 				label='Occupation'
 				type='text'
@@ -57,7 +52,6 @@ const CharacterForm = ({ character, handleChange, handleSubmit }) => {
 				placeholder='Pirate'
 				onChange={handleChange}
 			/>
-
 			<FormSelectField
 				name='location'
 				label='Location'
@@ -66,7 +60,6 @@ const CharacterForm = ({ character, handleChange, handleSubmit }) => {
 				onChange={handleChange}
 				options='characterLocation'
 			/>
-
 			<FormSelectField
 				name='eyeColour'
 				label='Eye Colour'
@@ -75,7 +68,6 @@ const CharacterForm = ({ character, handleChange, handleSubmit }) => {
 				onChange={handleChange}
 				options='characterEyeColour'
 			/>
-
 			<FormSelectField
 				name='hairColour'
 				label='Hair Colour'
@@ -84,7 +76,6 @@ const CharacterForm = ({ character, handleChange, handleSubmit }) => {
 				onChange={handleChange}
 				options='characterHairColour'
 			/>
-
 			<FormTextInput
 				label='Main Trait'
 				type='text'
@@ -93,7 +84,6 @@ const CharacterForm = ({ character, handleChange, handleSubmit }) => {
 				placeholder='Intelligent'
 				onChange={handleChange}
 			/>
-
 			<FormTextInput
 				label='Special Ability'
 				type='text'
@@ -102,7 +92,6 @@ const CharacterForm = ({ character, handleChange, handleSubmit }) => {
 				placeholder='None'
 				onChange={handleChange}
 			/>
-
 			<SubmitBtn />
 		</Form>
 	);

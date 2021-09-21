@@ -35,3 +35,8 @@ input[type="submit"]:hover {
 		width: 50%;
 	}
 }
+.CharacterForm__titleDivider {
+	width: 45vw;
+	margin-top: -0.6em;
+	margin-bottom: 1.6em;
+}
