@@ -19,5 +19,4 @@ const FormSelectField = ({ name, value, onChange, label, options }) => {
 	);
 };
 
-/* Make reusable */
 export default FormSelectField;

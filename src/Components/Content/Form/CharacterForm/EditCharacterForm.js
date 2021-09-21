@@ -19,7 +19,7 @@ const EditCharacterForm = () => {
 		const value = e.target.value;
 		setCharacter({
 			...character,
-			[e.target.name]: value,
+			[e.target.name]: value
 		});
 	}
 
