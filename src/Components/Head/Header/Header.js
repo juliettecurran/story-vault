@@ -3,6 +3,7 @@ import { useCharacterStore } from "../../../Provider/CharacterStoreProvider";
 import { useLocationStore } from "../../../Provider/LocationStoreProvider";
 import { observer } from "mobx-react";
 import "./head.css";
+import { useHistory } from "react-router-dom";
 import { pluralise } from "../../../Utils/helpers.js";
 import Navbar from "../Navbar/Navbar";
 
@@ -21,7 +22,8 @@ const Header = () => {
 		"location",
 		"locations"
 	)} created`;
-
+	let history = useHistory();
+	const activePath = history.location.pathname;
 	return (
 		<header className='CharacterList__flexContainer'>
 			<h2 className='CharacterList__flexItem CharacterList__title'>
