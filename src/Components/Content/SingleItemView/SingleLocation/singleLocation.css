@@ -29,3 +29,7 @@ td {
 	background-color: #dbdbdb;
 	font-size: 80%;
 }
+
+.singleLocation__value li {
+	list-style: none;
+}

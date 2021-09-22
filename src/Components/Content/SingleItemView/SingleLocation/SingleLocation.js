@@ -72,6 +72,15 @@ const SingleLocation = () => {
 						<td className='singleLocation__label'>Symbol</td>
 						<td className='singleLocation__value'>{mySingleLocation.symbol}</td>
 					</tr>
+					<tr>
+						<td className='singleLocation__label'>Citizens</td>
+						<td className='singleLocation__value'>
+							{mySingleLocation.citizens.map((citizen, i) => {
+								const { name } = citizen;
+								return <li key={i}>{name}</li>;
+							})}
+						</td>
+					</tr>
 				</tbody>
 			</table>
 		</div>

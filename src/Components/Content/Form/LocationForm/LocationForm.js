@@ -3,27 +3,23 @@ import "./locationForm.css";
 import FormTextInput from "../FormElements/FormTextInput";
 import FormSelectField from "../FormElements/FormSelectField";
 import { useCharacterStore } from "../../../../Provider/CharacterStoreProvider";
-import { toJS } from "mobx";
 import Form from "../Form.js";
 import SubmitBtn from "../FormElements/SubmitBtn";
 
-const LocationForm = ({
-	location,
-	handleChange,
-	handleSubmit,
-	handleCheckboxChange
-}) => {
-	const characterStore = useCharacterStore();
-	const { characterList } = useCharacterStore();
-	console.log(toJS(characterList));
+const LocationForm = ({ location, handleChange, handleSubmit }) => {
+	const { characterList, characterById } = useCharacterStore();
 
 	const handleLocationChange = (id) => {
-		console.log(id, "handleLocationChange");
+		const character = characterById(id);
+
+		location.citizens.push(character);
 	};
+
 	return (
 		<Form handleSubmit={handleSubmit}>
 			<h3>Create a new location</h3>
 			<hr className='LocationForm__titleDivider'></hr>
+
 			<FormTextInput
 				label='Name'
 				type='text'
@@ -109,13 +105,15 @@ const LocationForm = ({
 			/>
 
 			{characterList.map((character, index) => {
+				console.log(characterList, "characterList");
+				console.log(location, "citizens");
 				return (
 					<div key={index}>
 						{character.name}
 						<input
 							name={character.name}
 							type='checkbox'
-							checked={false}
+							//value
 							onChange={() => handleLocationChange(character.Id)}
 						/>
 					</div>
