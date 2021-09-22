@@ -29,11 +29,11 @@ const CharacterList = () => {
 					const { Id, title, name } = character;
 					return (
 						<article key={Id} className='CharacterList__characterCard'>
-							<Link to={`/character/${Id}`}>
+							<Link to={`/character/${Id}`} className='characterList__link'>
 								<h5 className='CharacterList__displayCharacterName'>
 									{title} {name}
 								</h5>
-								<img src='https://via.placeholder.com/250'></img>
+								<img src='https://via.placeholder.com/250' alt=''></img>
 							</Link>
 
 							<div className='CharacterList__btnGroup'>
