@@ -1,0 +1,10 @@
+.container {
+	height: 100%;
+	min-width: auto;
+	padding: 2em;
+	outline: 1px solid blueviolet;
+}
+
+.emptyList__emptyListAlert {
+	font-style: italic;
+}
