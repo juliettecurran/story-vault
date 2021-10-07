@@ -92,6 +92,14 @@ const CharacterForm = ({ character, handleChange, handleSubmit }) => {
 				placeholder='None'
 				onChange={handleChange}
 			/>
+			<FormTextInput
+				label='Image URL'
+				type='text'
+				name='characterImage'
+				value={character.characterImage}
+				placeholder='https://via.placeholder.com/250x250'
+				onChange={handleChange}
+			/>
 			<SubmitBtn />
 		</Form>
 	);

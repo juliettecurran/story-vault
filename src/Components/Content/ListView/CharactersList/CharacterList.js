@@ -26,14 +26,18 @@ const CharacterList = () => {
 				{characterList && characterList.length > 0 ? (
 					<>
 						{characterList.map((character) => {
-							const { Id, title, name } = character;
-
+							const { Id, title, name, characterImage } =
+								character;
+							{
+								console.log(character);
+							}
 							return (
 								<ItemCard
 									Id={Id}
 									key={Id}
 									title={title}
 									name={name}
+									characterImage={characterImage}
 									cardType='character'
 									handleEdit={handleEdit}
 									handleDelete={handleDelete}

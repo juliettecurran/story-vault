@@ -23,6 +23,14 @@
 	border-bottom-right-radius: 15px;
 }
 
+.itemCard__imageContainer {
+	overflow: hidden;
+	width: 100%;
+}
+.itemCard__characterImage {
+	height: 250px;
+}
+
 .itemCard__editCardBtn,
 .itemCard__deleteCardBtn {
 	text-decoration: none;
@@ -70,7 +78,7 @@ a:active {
 .itemCard__displayName {
 	margin: 0;
 	color: white;
-	width: 250px;
+	/* 	width: 250px; */
 	padding: 8px 0px 8px 0px;
 	background-color: #e45b00;
 	border-top-left-radius: 10px;

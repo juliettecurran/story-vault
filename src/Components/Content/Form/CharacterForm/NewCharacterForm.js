@@ -17,6 +17,7 @@ const NewCharacterForm = () => {
 		location: "Ocean",
 		mainTrait: "",
 		specialAbility: "",
+		characterImage: "https://via.placeholder.com/250x250"
 	};
 
 	const [character, setCharacter] = React.useState(defaultState);
@@ -25,7 +26,7 @@ const NewCharacterForm = () => {
 		const value = e.target.value;
 		setCharacter({
 			...character,
-			[e.target.name]: value,
+			[e.target.name]: value
 		});
 	}
 

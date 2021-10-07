@@ -12,11 +12,11 @@ const SingleCharacter = () => {
 	return (
 		<div className='singleCharacter__container'>
 			<img
-				className='singleCharacter__image'
-				src='https://via.placeholder.com/300'
+				className='singleCharacter__characterImage'
+				src={`${mySingleCharacter.characterImage}`}
 				alt=''
 			></img>
-
+			{console.log("char", mySingleCharacter)}
 			<table className='singleCharacter__table'>
 				<thead></thead>
 				<tbody>
@@ -28,7 +28,9 @@ const SingleCharacter = () => {
 					</tr>
 					<tr>
 						<td className='singleCharacter__label'>Name</td>
-						<td className='singleCharacter__value'>{mySingleCharacter.name}</td>
+						<td className='singleCharacter__value'>
+							{mySingleCharacter.name}
+						</td>
 					</tr>
 					<tr>
 						<td className='singleCharacter__label'>Role</td>
@@ -38,7 +40,9 @@ const SingleCharacter = () => {
 					</tr>
 					<tr>
 						<td className='singleCharacter__label'>Age</td>
-						<td className='singleCharacter__value'>{mySingleCharacter.age}</td>
+						<td className='singleCharacter__value'>
+							{mySingleCharacter.age}
+						</td>
 					</tr>
 					<tr>
 						<td className='singleCharacter__label'>Job</td>
@@ -71,7 +75,9 @@ const SingleCharacter = () => {
 						</td>
 					</tr>
 					<tr>
-						<td className='singleCharacter__label'>Special Ability</td>
+						<td className='singleCharacter__label'>
+							Special Ability
+						</td>
 						<td className='singleCharacter__value'>
 							{mySingleCharacter.specialAbility}
 						</td>

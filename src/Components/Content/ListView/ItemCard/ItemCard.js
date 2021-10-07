@@ -3,14 +3,33 @@ import { observer } from "mobx-react";
 import { Link } from "react-router-dom";
 import "./itemCard.css";
 
-const ItemCard = ({ Id, title, name, cardType, handleEdit, handleDelete }) => {
+const ItemCard = ({
+	Id,
+	title,
+	name,
+	characterImage,
+	cardType,
+	handleEdit,
+	handleDelete
+}) => {
 	return (
 		<article key={Id} className='itemCard'>
 			<Link to={`/${cardType}/${Id}`}>
-				<h5 className='itemCard__displayName' value={name}>
+				<h5
+					className='itemCard__displayName'
+					Link
+					to={`/${cardType}/${Id}`}
+					value={name}
+				>
 					{title} {name}
 				</h5>
-				<img src='https://via.placeholder.com/250' alt=''></img>
+				<div className='itemCard__imageContainer'>
+					<img
+						src={`${characterImage}`}
+						className='itemCard__characterImage'
+						alt=' '
+					></img>
+				</div>
 			</Link>
 
 			<div className='itemCard__btnGroup'>
