@@ -14,6 +14,9 @@ const FormSelectField = ({ name, value, onChange, label, options }) => {
 				onChange={onChange}
 				className='FormSelectField__select'
 			>
+				<option selected disabled>
+					Choose option
+				</option>
 				{typeOptions.map((item, index) => (
 					<option key={index} value={item}>
 						{item}

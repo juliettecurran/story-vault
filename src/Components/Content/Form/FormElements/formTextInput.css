@@ -10,7 +10,7 @@
 input[type="text"],
 input[type="number"],
 select {
-	width: 70%;
+	width: 75%;
 	padding: 12px;
 	border: 1px solid #dadde9;
 	border-radius: 4px;
@@ -18,3 +18,11 @@ select {
 	margin-top: 6px;
 	margin-bottom: 16px;
 }
+
+label {
+	width: 25%;
+	text-align: left;
+	margin-left: 7x;
+}
+
+/* NEED media query for smaller screens */

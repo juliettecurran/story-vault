@@ -32,10 +32,8 @@ const NewLocationForm = () => {
 	};
 
 	const handleCheckboxChange = (id) => {
-		citizens.push(setCitizens(id));
-		/* 	citizens.push(id); */
+		setCitizens(id);
 	};
-	console.log(citizens, "citizens");
 
 	function handleSubmit(event) {
 		event.preventDefault();
