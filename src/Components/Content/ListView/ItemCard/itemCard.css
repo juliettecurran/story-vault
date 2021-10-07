@@ -27,8 +27,12 @@
 	overflow: hidden;
 	width: 100%;
 }
-.itemCard__characterImage {
+.itemCard__itemImage {
 	height: 250px;
+}
+
+.itemCard__link {
+	width: 250px;
 }
 
 .itemCard__editCardBtn,

@@ -14,7 +14,7 @@ const ItemCard = ({
 }) => {
 	return (
 		<article key={Id} className='itemCard'>
-			<Link to={`/${cardType}/${Id}`}>
+			<Link to={`/${cardType}/${Id}`} className='itemCard__link'>
 				<h5
 					className='itemCard__displayName'
 					Link
@@ -26,7 +26,7 @@ const ItemCard = ({
 				<div className='itemCard__imageContainer'>
 					<img
 						src={`${characterImage}`}
-						className='itemCard__characterImage'
+						className='itemCard__itemImage'
 						alt=' '
 					></img>
 				</div>
