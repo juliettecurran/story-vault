@@ -24,11 +24,13 @@
 }
 
 .itemCard__imageContainer {
-	overflow: hidden;
+	/* overflow: hidden; */
 	width: 100%;
 }
 .itemCard__itemImage {
 	height: 250px;
+	width: 100%;
+	object-fit: cover;
 }
 
 .itemCard__link {

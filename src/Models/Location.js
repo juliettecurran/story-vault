@@ -14,6 +14,7 @@ class Location {
 		this.language = data.language;
 		this.symbol = data.symbol;
 		this.citizens = data.citizens;
+		this.locationImage = data.locationImage;
 	}
 }
 

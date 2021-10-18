@@ -1,35 +1,36 @@
 .singleLocation__container {
-	display: flex;
-	flex-direction: column;
+  display: flex;
+  flex-direction: column;
 }
 
 .singleLocation__image {
-	align-self: center;
+  align-self: center;
+  height: 250px;
 }
 
 .singleLocation__table {
-	display: inline-block;
-	align-self: center;
+  display: inline-block;
+  align-self: center;
 }
 
 td {
-	text-align: center;
-	padding: 9px 16px 8px 16px;
-	background-color: #dbdbdb;
+  text-align: center;
+  padding: 9px 16px 8px 16px;
+  background-color: #dbdbdb;
 }
 
 .singleLocation__label {
-	font-weight: 600;
-	background-color: chocolate;
-	color: white;
-	font-size: 90%;
+  font-weight: 600;
+  background-color: chocolate;
+  color: white;
+  font-size: 90%;
 }
 
 .singleLocation__value {
-	background-color: #dbdbdb;
-	font-size: 80%;
+  background-color: #dbdbdb;
+  font-size: 80%;
 }
 
 .singleLocation__value li {
-	list-style: none;
+  list-style: none;
 }

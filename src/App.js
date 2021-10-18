@@ -13,48 +13,50 @@ import EditCharacterForm from "./Components/Content/Form/CharacterForm/EditChara
 import LocationList from "./Components/Content/ListView/LocationsList/LocationList";
 import SingleLocation from "./Components/Content/SingleItemView/SingleLocation/SingleLocation";
 import EditLocationForm from "./Components/Content/Form/LocationForm/EditLocationForm";
-import { library } from "@fortawesome/fontawesome-svg-core";
+/* import { library } from "@fortawesome/fontawesome-svg-core"; */
 
 function App() {
-	return (
-		<div className='grid-container App'>
-			<BrowserRouter>
-				<div className='Header'>
-					<Header />
-				</div>
-				<div className='Content'>
-					<Switch>
-						<Route exact path='/'>
-							<Home />
-						</Route>
-						<Route exact path='/all'>
-							<CharacterList />
-							<LocationList />
-						</Route>
-						<Route exact path='/new/character'>
-							<NewCharacterForm />
-						</Route>
-						<Route exact path='/character/edit/:character_id'>
-							<EditCharacterForm />
-						</Route>
-						<Route exact path='/character/:character_id'>
-							<SingleCharacter />
-						</Route>
-						<Route exact path='/new/location'>
-							<NewLocationForm />
-						</Route>
-						<Route exact path='/location/edit/:location_id'>
-							<EditLocationForm />
-						</Route>
-						<Route exact path='/location/:location_id'></Route>
-					</Switch>
-				</div>
-				<div className='Footer'>
-					<Footer />
-				</div>
-			</BrowserRouter>
-		</div>
-	);
+  return (
+    <div className="grid-container App">
+      <BrowserRouter>
+        <div className="Header">
+          <Header />
+        </div>
+        <div className="Content">
+          <Switch>
+            <Route exact path="/">
+              <Home />
+            </Route>
+            <Route exact path="/all">
+              <CharacterList />
+              <LocationList />
+            </Route>
+            <Route exact path="/new/character">
+              <NewCharacterForm />
+            </Route>
+            <Route exact path="/character/edit/:character_id">
+              <EditCharacterForm />
+            </Route>
+            <Route exact path="/character/:character_id">
+              <SingleCharacter />
+            </Route>
+            <Route exact path="/new/location">
+              <NewLocationForm />
+            </Route>
+            <Route exact path="/location/edit/:location_id">
+              <EditLocationForm />
+            </Route>
+            <Route exact path="/location/:location_id">
+              <SingleLocation />
+            </Route>
+          </Switch>
+        </div>
+        <div className="Footer">
+          <Footer />
+        </div>
+      </BrowserRouter>
+    </div>
+  );
 }
 
 export default App;
