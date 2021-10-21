@@ -8,6 +8,7 @@ import NewCharacterForm from "./Components/Content/Form/CharacterForm/NewCharact
 import NewLocationForm from "./Components/Content/Form/LocationForm/NewLocationForm";
 import SingleCharacter from "./Components/Content/SingleItemView/SingleCharacter/SingleCharacter";
 import Footer from "./Components/Footer/Footer";
+
 import { BrowserRouter, Route, Switch } from "react-router-dom";
 import EditCharacterForm from "./Components/Content/Form/CharacterForm/EditCharacterForm";
 import LocationList from "./Components/Content/ListView/LocationsList/LocationList";

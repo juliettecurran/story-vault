@@ -25,14 +25,11 @@ const LocationList = () => {
       <div className="LocationList__container">
         {locationList && locationList.length > 0 ? (
           <>
-            {locationList.map((location) => {
-              const { Id, name, locationImage } = location;
+            {locationList.map((location, index) => {
               return (
                 <ItemCard
-                  Id={Id}
-                  key={Id}
-                  name={name}
-                  itemImage={locationImage}
+                  key={index}
+                  character={location}
                   cardType="location"
                   handleEdit={handleEdit}
                   handleDelete={handleDelete}
