@@ -1,0 +1,12 @@
+.itemCardModalDetails__editCardBtn,
+.itemCardModalDetails__deleteCardBtn {
+  text-decoration: none;
+  padding: 0.5em;
+  background-color: #095256;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 14px;
+  border: none;
+  color: white;
+  font-weight: 600;
+}

@@ -1,97 +1,97 @@
 @import url("https://fonts.googleapis.com/css2?family=Satisfy&display=swap");
 
 .itemCard__container {
-	display: flex;
-	flex-direction: row;
-	flex-wrap: wrap;
-	justify-content: space-around;
-	align-items: center;
-	width: 100%;
-	gap: 60px 20px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+  gap: 60px 20px;
 }
 
 .itemCard {
-	display: flex;
-	flex-direction: column;
-	justify-content: space-around;
-	align-items: center;
-	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-	width: 250px;
-	margin: auto;
-	text-align: center;
-	border-bottom-left-radius: 15px;
-	border-bottom-right-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  width: 250px;
+  margin: auto;
+  text-align: center;
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
+  cursor: pointer;
 }
 
 .itemCard__imageContainer {
-	/* overflow: hidden; */
-	width: 100%;
+  /* overflow: hidden; */
+  width: 100%;
+  background-color: #095256;
 }
 .itemCard__itemImage {
-	height: 250px;
-	width: 100%;
-	object-fit: cover;
+  height: 250px;
+  width: 100%;
+  object-fit: cover;
 }
 
-.itemCard__link {
-	width: 250px;
-}
-
+.itemCard__viewModalBtn,
 .itemCard__editCardBtn,
 .itemCard__deleteCardBtn {
-	text-decoration: none;
-	padding: 0.5em;
-	background-color: #028a6c;
-	border-radius: 8px;
-	cursor: pointer;
-	font-size: 14px;
-	border: none;
-	color: white;
-	font-weight: 600;
+  text-decoration: none;
+  padding: 0.5em;
+  background-color: #095256;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 14px;
+  border: none;
+  color: white;
+  font-weight: 600;
 }
 
 .itemCard__editCharacterBtn:hover,
 .itemCard__deleteCharacterBtn:hover {
-	background-color: #0c473b;
+  background-color: #0c473b;
 }
 
 .itemCard__btnGroup {
-	display: flex;
-	flex-direction: row;
-	width: 100%;
-	padding: 0.5em 0 0.5em 0;
-	justify-content: space-evenly;
-	align-items: center;
-	border-bottom-left-radius: 10px;
-	border-bottom-right-radius: 10px;
-	background-color: white;
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  padding: 0.5em 0 0.5em 0;
+  justify-content: space-evenly;
+  align-items: center;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  background-color: #095256;
 }
 
 a:hover,
 a:visited,
 a:link,
 a:active {
-	text-decoration: none;
+  text-decoration: none;
 }
 
 .itemCard__listTitle {
-	position: relative;
-	overflow: hidden;
-	font-family: "Satisfy", cursive;
-	font-size: 1.7em;
+  position: relative;
+  overflow: hidden;
+  font-family: "Satisfy", cursive;
+  font-size: 1.7em;
 }
 
 .itemCard__displayName {
-	margin: 0;
-	color: white;
-	/* 	width: 250px; */
-	padding: 8px 0px 8px 0px;
-	background-color: #e45b00;
-	border-top-left-radius: 10px;
-	border-top-right-radius: 10px;
-	overflow: hidden;
-	text-overflow: ellipsis;
-	white-space: nowrap;
+  margin: 0;
+  width: 250px;
+  color: white;
+  /* 	width: 250px; */
+  padding: 8px 0px 8px 0px;
+  background-color: #028a6c;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 /* 
 .characterList__link {

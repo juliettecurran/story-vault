@@ -3,7 +3,7 @@
 	flex-direction: column;
 }
 
-.singleCharacter__characterImage {
+.singleCharacter__itemImage {
 	align-self: center;
 	height: 250px;
 }
