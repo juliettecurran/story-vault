@@ -3,13 +3,14 @@ import "./navbar.css";
 import NavButton from "./NavButton";
 
 const Navbar = () => {
-	return (
-		<nav className='Navbar__navbar'>
-			<NavButton to='/'>Home</NavButton>
-			<NavButton to='/all'>All</NavButton>
-			<NavButton to='/new/character'>Create</NavButton>
-		</nav>
-	);
+    return (
+        <nav className='Navbar__navbar'>
+            <NavButton to='/'>Home</NavButton>
+            <NavButton to='/all'>All</NavButton>
+            <NavButton to='/new/character'>Create</NavButton>
+            <NavButton to='/worldbuilding'>Worldbuilding</NavButton>
+        </nav>
+    );
 };
 
 export default Navbar;

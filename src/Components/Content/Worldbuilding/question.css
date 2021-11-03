@@ -1,0 +1,3 @@
+.question__questionTile::selection {
+    background: transparent;
+}

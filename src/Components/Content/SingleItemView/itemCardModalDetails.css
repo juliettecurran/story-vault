@@ -1,3 +1,35 @@
+.itemCardModalDetails__container {
+    display: flex;
+	flex-direction: column;
+}
+
+.itemCardModalDetails__itemImage {
+    align-self: center;
+	height: 250px;
+}
+
+.itemCardModalDetails__table {
+    display: inline-block;
+	align-self: center;
+}
+
+td {
+    text-align: center;
+	background-color: #dbdbdb;
+}
+
+.itemCardModalDetails__label {
+    font-weight: 600;
+	background-color: rgb(74, 75, 74);
+	color: white;
+	font-size: 14px;
+}
+
+.itemCardModalDetails__value {
+    background-color:rgb(209, 211, 209);
+	font-size: 14px;
+}
+
 .itemCardModalDetails__editCardBtn,
 .itemCardModalDetails__deleteCardBtn {
   text-decoration: none;

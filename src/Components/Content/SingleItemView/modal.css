@@ -37,7 +37,7 @@
   position: absolute;
   left: 10px;
   height: 30px;
-  padding: 5px;
+  width: 30px;
   background-color: #095256;
   color: white;
   font-weight: 600;
@@ -55,6 +55,3 @@
   border-bottom-right-radius: 10px;
 }
 
-.modal__body {
-  padding: 10px;
-}

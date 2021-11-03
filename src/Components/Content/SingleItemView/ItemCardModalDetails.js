@@ -5,65 +5,65 @@ const ItemCardModalDetails = ({ character, handleEdit, handleDelete }) => {
     return (
         <div>
             <div className="modal__body">
-                <div className="singleCharacter__container">
+                <div className="itemCardModalDetails__container">
                     <img
-                        className="singleCharacter__itemImage"
+                        className="itemCardModalDetails__itemImage"
                         src={`${character.itemImage}`}
                         alt=""
                     ></img>
 
-                    <table className="singleCharacter__table">
+                    <table className="itemCardModalDetails__table">
                         <thead></thead>
                         <tbody>
                             <tr>
-                                <td className="singleCharacter__label">Title</td>
-                                <td className="singleCharacter__value">{character.title}</td>
+                                <td className="itemCardModalDetails__label">Title</td>
+                                <td className="itemCardModalDetails__value">{character.title}</td>
                             </tr>
                             <tr>
-                                <td className="singleCharacter__label">Name</td>
-                                <td className="singleCharacter__value">{character.name}</td>
+                                <td className="itemCardModalDetails__label">Name</td>
+                                <td className="itemCardModalDetails__value">{character.name}</td>
                             </tr>
                             <tr>
-                                <td className="singleCharacter__label">Role</td>
-                                <td className="singleCharacter__value">
+                                <td className="itemCardModalDetails__label">Role</td>
+                                <td className="itemCardModalDetails__value">
                                     {character.characterType}
                                 </td>
                             </tr>
                             <tr>
-                                <td className="singleCharacter__label">Age</td>
-                                <td className="singleCharacter__value">{character.age}</td>
+                                <td className="itemCardModalDetails__label">Age</td>
+                                <td className="itemCardModalDetails__value">{character.age}</td>
                             </tr>
                             <tr>
-                                <td className="singleCharacter__label">Job</td>
-                                <td className="singleCharacter__value">
+                                <td className="itemCardModalDetails__label">Job</td>
+                                <td className="itemCardModalDetails__value">
                                     {character.occupation}
                                 </td>
                             </tr>
                             <tr>
-                                <td className="singleCharacter__label">Eye Colour</td>
-                                <td className="singleCharacter__value">
+                                <td className="itemCardModalDetails__label">Eye Colour</td>
+                                <td className="itemCardModalDetails__value">
                                     {character.eyeColour}
                                 </td>
                             </tr>
                             <tr>
-                                <td className="singleCharacter__label">Hair Colour</td>
-                                <td className="singleCharacter__value">
+                                <td className="itemCardModalDetails__label">Hair Colour</td>
+                                <td className="itemCardModalDetails__value">
                                     {character.hairColour}
                                 </td>
                             </tr>
                             <tr>
-                                <td className="singleCharacter__label">Location</td>
-                                <td className="singleCharacter__value">{character.location}</td>
+                                <td className="itemCardModalDetails__label">Location</td>
+                                <td className="itemCardModalDetails__value">{character.location}</td>
                             </tr>
                             <tr>
-                                <td className="singleCharacter__label">Main Trait</td>
-                                <td className="singleCharacter__value">
+                                <td className="itemCardModalDetails__label">Main Trait</td>
+                                <td className="itemCardModalDetails__value">
                                     {character.mainTrait}
                                 </td>
                             </tr>
                             <tr>
-                                <td className="singleCharacter__label">Special Ability</td>
-                                <td className="singleCharacter__value">
+                                <td className="itemCardModalDetails__label">Special Ability</td>
+                                <td className="itemCardModalDetails__value">
                                     {character.specialAbility}
                                 </td>
                             </tr>
