@@ -1,0 +1,16 @@
+td {
+    text-align: center;
+	background-color: #dbdbdb;
+}
+
+.itemCardModalDetails__label {
+    font-weight: 600;
+	background-color: rgb(74, 75, 74);
+	color: white;
+	font-size: 14px;
+}
+
+.itemCardModalDetails__value {
+    background-color:rgb(209, 211, 209);
+	font-size: 14px;
+}

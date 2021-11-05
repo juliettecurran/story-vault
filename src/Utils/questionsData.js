@@ -12,19 +12,19 @@ const questionsData = {
         'question-10': { id: 'question-10', content: 'What goods is the location known for?' }
     },
     columns: {
-        'column-1': {
-            id: 'column-1',
+        'locationQuestions': {
+            id: 'locationQuestions',
             title: 'Location Questions',
             questionIds: ['question-1', 'question-2', 'question-3', 'question-4', 'question-5', 'question-6', 'question-7', 'question-8', 'question-9', 'question-10'],
         },
-        'column-2': {
-            id: 'column-2',
+        'Answers': {
+            id: 'Answers',
             title: 'Answers',
             questionIds: [],
         }
     },
     //Helps reordering of columns
-    columnOrder: ['column-1', 'column-2'],
+    columnOrder: ['locationQuestions', 'Answers'],
 };
 
 export default questionsData;

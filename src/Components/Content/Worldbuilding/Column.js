@@ -21,7 +21,7 @@ padding:8px;
 `;
 const QuestionList = styled.div`
    padding: 8px;
-   background-color: ${props => (props.isDraggingOver ? '#ba510b' : '#e45b00')}
+   background-color: ${props => (props.isDraggingOver ? 'green' : 'blue')}
    flex-grow: 1;
    min-height: 250px;
 `;
@@ -33,6 +33,7 @@ export default class Column extends Component {
             <Container>
                 <Title> {this.props.column.title} </Title>
                 <Droppable droppableId={this.props.column.id}>
+
                     {(provided, snapshot) => (
                         <QuestionList
                             ref={provided.innerRef}
@@ -40,11 +41,13 @@ export default class Column extends Component {
                             {...provided.droppableProps}
                             isDraggingOver={snapshot.isDraggingOver}
                         >
-                            {this.props.questions.map((question, index) => <Question key={question.id} question={question} index={index} />)}
+                            {this.props.questions.map((question, index) => <Question columnId={this.props.column.id} key={question.id} question={question} index={index} />)}
 
                             {provided.placeholder}
                         </QuestionList>
                     )}
+
+
                 </Droppable>
             </Container>
         )

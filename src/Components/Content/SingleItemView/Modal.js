@@ -1,4 +1,3 @@
-import React, { useEffect } from "react";
 import reactDom from "react-dom";
 
 import "./modal.css";

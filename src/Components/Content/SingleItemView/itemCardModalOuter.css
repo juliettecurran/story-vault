@@ -1,0 +1,31 @@
+.itemCardModalOuter__container {
+    display: flex;
+	flex-direction: column;
+}
+
+.itemCardModalOuter__itemImage {
+    align-self: center;
+	height: 250px;
+}
+
+.itemCardModalOuter__table {
+    display: inline-block;
+	align-self: center;
+}
+
+
+/* Footer */
+
+
+.itemCardModalOuter__editCardBtn,
+.itemCardModalOuter__deleteCardBtn {
+  text-decoration: none;
+  padding: 0.5em;
+  background-color: #095256;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 14px;
+  border: none;
+  color: white;
+  font-weight: 600;
+}

@@ -8,6 +8,8 @@ const Container = styled.div`
 display: flex;
 `;
 
+
+console.log('qd', questionsData.columns)
 export class Worldbuilding extends Component {
     state = questionsData;
 

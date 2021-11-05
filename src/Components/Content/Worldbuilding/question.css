@@ -1,3 +1,17 @@
 .question__questionTile::selection {
     background: transparent;
 }
+
+
+.question__questionInput  {
+    padding: 10px;
+    margin: 10px 0;
+    background-color:lightgray;
+    border: 0;
+    box-shadow: 0px 5px 17px -7px rgba(0, 0, 0, 0.75);
+    width: 85%;
+     }
+
+     textarea {
+resize: vertical; 
+     }

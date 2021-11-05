@@ -1,28 +1,30 @@
-import React from "react";
+import React, { useState } from "react";
 import { observer } from "mobx-react";
-import { Link } from "react-router-dom";
-import "./itemCard.css";
 import Modal from "../../SingleItemView/Modal";
-import { useState } from "react";
-import ItemCardModalDetails from "../../SingleItemView/ItemCardModalDetails";
-const ItemCard = ({ character, location, cardType, handleEdit, handleDelete }) => {
+import "./itemCard.css";
+
+const ItemCard = ({ data, handleEdit, handleDelete, cardType, children }) => {
     const [openModal, setOpenModal] = useState(false);
     const {
         Id,
         title,
         name,
         itemImage,
-    } = character;
+    } = data;
 
-    console.log('char', character)
-    console.log('location', location)
+    const handleModalOpen = () => {
+        setOpenModal(true)
+    }
+
+    const handleModalClose = () => {
+        setOpenModal(false)
+    }
+    console.log('char', data)
     return (
         <article key={Id} className="itemCard">
             <h5
                 className="itemCard__displayName"
-                onClick={() => {
-                    setOpenModal(true);
-                }}
+                onClick={handleModalOpen}
                 value={name}
             >
                 {title} {name}
@@ -33,18 +35,14 @@ const ItemCard = ({ character, location, cardType, handleEdit, handleDelete }) =
                     src={`${itemImage}`}
                     className="itemCard__itemImage"
                     alt=" "
-                    onClick={() => {
-                        setOpenModal(true);
-                    }}
+                    onClick={handleModalOpen}
                 ></img>
             </div>
 
             <div className="itemCard__btnGroup">
                 {/*  <Link to={`/${cardType}/${Id}`}> */}
                 <button
-                    onClick={() => {
-                        setOpenModal(true);
-                    }}
+                    onClick={handleModalOpen}
                     type="button"
                     className="itemCard__viewModalBtn"
                 >
@@ -67,13 +65,8 @@ const ItemCard = ({ character, location, cardType, handleEdit, handleDelete }) =
                 </button>
             </div>
             {openModal && (
-                <Modal name={name} closeModal={setOpenModal}>
-                    <ItemCardModalDetails
-                        handleDelete={handleDelete}
-                        handleEdit={handleEdit}
-                        character={character}
-                        location={location}
-                    />
+                <Modal name={data.name} closeModal={handleModalClose}>
+                    {children}
                 </Modal>
             )}
         </article>

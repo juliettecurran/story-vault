@@ -13,8 +13,11 @@ background-color: ${props => (props.isDragging ? 'lightgray' : 'white')};
 
 
 export default class Question extends Component {
+
     render() {
+        console.log('props', this.props)
         return (
+
             <Draggable draggableId={this.props.question.id} index={this.props.index}>
                 {(provided, snapshot) => (
                     <Container
@@ -26,6 +29,9 @@ export default class Question extends Component {
                     >
 
                         <div className="question__questionTile" >{this.props.question.content}</div>
+
+                        {this.props.columnId === "Answers" ? <textarea className="question__questionInput" id="question__textarea"></textarea> : null}
+
                     </Container>
                 )}
             </Draggable>
